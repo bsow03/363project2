@@ -1,0 +1,134 @@
+
+
+.highlighted-row {
+  color: gold;
+  font-weight: bold;
+}
+
+  header h1 {
+    margin: 0;
+  }
+  
+  nav button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  
+  h2 {
+    border-bottom: 2px solid #444;
+    padding-bottom: 0.5rem;
+  }
+
+  .card {
+    background: #f0f0f0;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+  }
+  
+  
+  .grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  
+  iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+    border-radius: 8px;
+  }
+
+
+  .theme-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #4e9af1; /* Add background color for visibility */
+    border: none;
+    color: white; /* Set text color to make it visible */
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 5px; /* Optional for rounded button */
+  }
+  
+  
+
+ .theme-toggle-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+  }
+  
+  /* Outer switch container */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+  }
+  
+  /* Hide native checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider background */
+  .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6px;
+    font-size: 14px;
+  }
+  
+  /* The sun/moon icons inside the slider */
+  .slider .icon {
+    z-index: 2;
+    color: #fff;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    line-height: 18px;
+    pointer-events: none;
+  }
+  
+  /* The sliding knob */
+  .slider::before {
+    content: "";
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.4s;
+    z-index: 1;
+  }
+  
+  /* When checked, slide knob and change bg */
+  input:checked + .slider {
+    background-color: #4e9af1;
+  }
+  
+  input:checked + .slider::before {
+    transform: translateX(30px);
+  }
+  

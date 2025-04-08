@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn About a Random NBA Team</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+  <style>
+    body {
+      transition: background-color 0.5s ease;
+    }
+    .team-logo img {
+      max-width: 150px;
+      max-height: 150px;
+      aspect-ratio: auto;
+      transition: 0.5s ease-in-out;
+    }
+    .team-logo img:hover{
+      scale: 1.2;
+    }
+    .card-header-title {
+      font-size: 1.5rem;
+    }
+    .highlighted {
+      color: #00d1b2; /* Bulma's success color for the winning team */
+      font-weight: bold;
+    }
+    .theme-toggle {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 1.2rem;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  
+  <nav class="nav is-justify-content-flex-start p-5 has-text-centered">
+        <div><h2 class="is-size-4 has-text-weight-bold">Another Team?</h2></div>
+        <div class="is-justify-content-center">
+            <p class="is-size-6">Pick A Conference To Generate Another Random Team</p>
+            <a href="" id="eastLink" class="has-text-left has-text-weight-bold">East</a>
+            <a href="" id="westLink" class="has-text-right has-text-weight-bold has-text-danger">West</a>
+        </div>
+        <!-- Theme Toggle Button -->
+  <button class="theme-toggle" id="themeToggle">Toggle Theme</button>
+  </nav>
+
+  <div class="container">
+    <!-- First Container: Team Info -->
+    <div class="columns is-multiline">
+      <div class="column is-12">
+        <div class="card" id="teamInfo">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-72x72 team-logo">
+                  <img src="" alt="Team Logo" id="teamLogo">
+                </figure>
+              </div>
+              <div class="media-content">
+                <p class="title is-4" id="teamName">Team Name</p>
+                <p class="subtitle is-6" id="teamStanding">Team Standing</p>
+                <p class="is-size-6"id="teamRecord"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Container: Last 5 Games -->
+      <div class="column is-12">
+        <div class="card" id="conferenceStandings">
+            <div class="card-content">
+                <h3 class="title is-4">Conference Standings</h3>
+                <div id="standingsInfo"></div> 
+        </div>
+      </div>    
+
+      <!-- Third Container: Highlight Videos -->
+      <div class="column is-12">
+        <div class="card" id="highlightVideos">
+          <div class="card-content">
+            <h3 class="title is-4">Check Out Their Highlights!</h3>
+            <div id="teamHighlights" alt="Click this video!" class="columns is-multiline is-variable is-3 m-3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="has-background-light has-text-dark p-5 m-2"> Created by Telly </footer>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+  
